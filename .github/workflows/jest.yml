@@ -5,12 +5,12 @@ jobs:
   test: 
     runs-on: ubuntu-latest  # 実行環境はubuntu
     steps:
-    - uses: actions/checkout@v1 # ソースをチェックアウト
+    - uses: actions/checkout@v2 # ソースをチェックアウト
     - name: Setup Node.js # node.jsをセットアップ
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
-        node-version: '14.17.x'
-    - name: yarn install
+        node-version: '14'
+    - name: yarn install 
       run: yarn install
     - name: Run jest test
       run: yarn test
